@@ -1,0 +1,70 @@
+This will be a 2D text version of Minecraft You will need to create an object 
+oriented and well thought out game. Your game should include all necessary menus 
+and structures to make it a complete program. The basic required game mechanics 
+are described below: 
+
+
+List of blocks and their symbols: (all inherit from the Block class)
+
+Block name		Elemental symbol	     Drops			                       Requirements							                    Spawn On
+Air 			          AI					     None			                                                                       0-9
+Coal Ore		        CO			         Coal			          Only minable with pickaxe otherwise drops nothing		        10-19		
+Cobblestone 	      CB			         Cobblestone		    Takes two hits if no pickaxe					                      30-39					
+Diamond Ore		      DO			         Diamond Gem		     Only minable with pickaxe otherwise drops nothing		      95-99		
+Dirt			          DI			         Dirt											                                                      40-59
+Gold Ore		        GO			         Gold Ore		        Only minable with pickaxe otherwise drops nothing		        90-94							
+Iron Ore		        IO			         Iron Ore		        Only minable with pickaxe otherwise drops nothing		        80-89		
+Leaves			        LE			         Stick			       Only 5% chance to drop a stick otherwise drops nothing 		  60-69				
+Stone			          ST			         Cobblestone             Takes two hits if no pickaxe					                  20-29
+Wooden Plank	      WP			         Wooden Plank										                                                70-79
+
+Non Block Items: (All inherit from the Item class)
+Name				           How to get
+Dimond Gems		    Mine diamond ore with pickaxe
+Gold Ingot			  Smelt gold Ore in furnace consumes 1 coal per ingot created
+Stick				      Drop from leaves or craft from wooden plank
+Coal              Mine Coal Ore with a pickaxe
+Iron Ingot			  Smelt from Iron Ore consumes 1 coal per ingot created			 
+Block of gold 	  Have 9 Gold Ingots 
+
+Tools: (All inherit from the Tool class
+Name				      Recepie						              Durability
+Furnace 			    8 cobblestone				            unlimited uses
+stone pickaxe		  3 cobblestone + 2 sticks	      20 blocks (automatically used only for pickaxe blocks if in inventory)
+Iron Pickaxe		  3 Iron Ingot + 2 sticks		      60 blocks (automatically used only for pickaxe blocks if in inventory)
+Diamond Pickaxe	  3 Diamond gems + 2 sticks	      unlimited uses
+
+Randomly generates a 5 x 5 grid of random blocks like so: 
+
+  0 1 2 3 4  
+a 0 1 2 3 4  
+b 0 1 2 3 4  
+c 0 1 2 3 4  
+d 0 1 2 3 4  
+e 0 1 2 3 4  
+
+Each number (other than top row) will be replaced by a random block 
+by showing it's element symbol. To mine a block the user will type in the 
+letter/number coordinate and hit enter.
+ 
+When you break a block it should be replaced with an air block. 
+
+for example e3 would be a valid coordinate input(similar to the game battleship)
+
+Blocks should spawn according to their spawn chance numbers which are a % chance 
+for each block.
+
+Once the user is done mining the specific area they can use the dig command to go 
+deeper and generate a new grid of blocks. 
+
+Win Condition:
+The user will win the game once they craft 1 block of gold. 
+
+build a menu that takes craft commands in the form: craft item. 
+After typing the command the game will tell you if the craft was 
+successfull by checking your inventory for the necessary items, 
+tools, and/or blocks.
+
+
+ 
+  
