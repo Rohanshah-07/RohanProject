@@ -75,6 +75,15 @@ class Furnace extends Tools {
                   num = 6 rem cobl size = 5 * 2 = 10 count 5
                   num = 7 rem cobl size = 4 * 2 = 8 count 6 
                   num = 8 rem cobl size = 3 * 2 = 6 count 7 <- this iteration should not go through since num > size * 2
+
+                  number = 0 rem cobl size = 9 * 2 = 18 num 1  <- loop always starts with 0, completes one round of execution of body and then increments the variable
+                  number = 1 rem cobl size = 8 * 2 = 16 num 2
+                  number = 2 rem cobl size = 7 * 2 = 14 num 3
+                  number = 3 no cobl  size = 6 * 2 = 12 num 4
+                  number = 4 rem cobl size = 5 * 2 = 10 num 5
+                  number = 5 rem cobl size = 4 * 2 = 8  num 6
+                  number = 6 rem cobl size = 3 * 2 = 8 num 7
+                  number = 7 rem cobl size = 2 * 2 = 4 <- this wont increase the num since condition is not meeting
                   
                   */
 
