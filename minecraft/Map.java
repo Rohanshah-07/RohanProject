@@ -148,6 +148,12 @@ public class Map {
                 return b;
             }
             if (flag2 == false) {
+                 if(((Cobblestone)b).getNumHits() < 1) {
+                     //Though this is possible, it is not at all recommended as it kind of destroys
+                     // the reason for inheritance. The best way would be to restructure your application
+                     // design so that there are NO parent to child dependencies. A parent
+                     // should not ever need to know its children or their capabilities.
+                 }
                 if (b.getAmount() < 1) {
                     System.out.println("Since you don't have a pickaxe, it takes two hits to break this block");
                     b.setAmount(b.getAmount() + 1);
